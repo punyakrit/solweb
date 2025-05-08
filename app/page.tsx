@@ -17,7 +17,6 @@ function page() {
           <WalletProvider wallets={[]} autoConnect>
             <WalletModalProvider>
               <div>
-                <Header />
                 <Main/>
               </div>
             </WalletModalProvider>
