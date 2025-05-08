@@ -27,7 +27,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="min-h-screen bg-gradient-to-br from-purple-900 via-violet-950 to-slate-950 text-white">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500 rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+            <div className="absolute bottom-40 right-20 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+          </div>
+          {children}
+        </div>
       </body>
     </html>
   );
