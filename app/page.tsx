@@ -12,18 +12,10 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 
 function page() {
   return (
-    
-    <ConnectionProvider endpoint="https://api.devnet.solana.com">
-          <WalletProvider wallets={[]} autoConnect>
-            <WalletModalProvider>
               <div>
+                <Header/>
                 <Main/>
-              </div>
-            </WalletModalProvider>
-          </WalletProvider>
-        </ConnectionProvider>
-     
-  );
+              </div>)
 }
 
 export default page;
