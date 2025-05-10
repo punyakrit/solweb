@@ -5,7 +5,7 @@ import {
   DialogTitle,
 } from "../ui/dialog";
 import { Dialog } from "../ui/dialog";
-import { X } from "lucide-react";
+import { Copy, X } from "lucide-react";
 import { getTokenHoldings } from "../../app/actions/getTokenHoldings";
 
 type TokenMetadata = {
@@ -72,8 +72,8 @@ function DialogPublicCard({
           <DialogTitle className="text-xl font-bold text-center">
             Wallet Holdings
           </DialogTitle>
-          <div className="text-sm text-gray-400 text-center mt-1">
-            {formatAddress(address)}
+          <div className="text-sm text-gray-400 text-center mt-1 flex items-center justify-center gap-2">
+            {formatAddress(address)} <Copy onClick={() => navigator.clipboard.writeText(address)} className="cursor-pointer w-4 h-4" />
           </div>
           
           <div className="flex justify-center mt-4">
